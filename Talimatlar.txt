@@ -1,0 +1,20 @@
+Genel Kurallar:
+* SCSS kullanılacak.
+* BEM yapısı kullanılacak.
+* JavaScript kütüphaneleri kullanılabilir, ancak CSS kütüphanesi kullanılmayacak.
+Mail Liste Görünümü:
+* Okunmamış Mailler: Koyu siyah renk ile gösterilecek.
+* Okunmuş Mailler: Soluk gri renk ile gösterilecek.
+* Seçili Mailler: Mavi renkte arka planı olacak.
+Mail Üzerinde Butonlar ve İkonlar:
+* Maillerin üzerine hover yapıldığında, sağ tarafta dört adet buton (örneğin: sil, okundu/okunmadı işaretleme, arşivle) görünmeli.
+* Sol tarafta ise taşıma işlemi için ikon gösterilecek ve bu ikonla maillerin sırasını değiştirebilmeliyiz.
+Mail Ekleme ve Silme:
+* Yeni mail gönderme ekranında, mail gönderildiğinde ekrana yeni bir mail olarak eklenmeli.
+* Silme butonuna tıklandığında mail listeden kaldırılmalı.
+Search Filtresi:
+* Üst kısımda bir arama (search) kutusu olacak ve yazılan metne göre mail listesi filtrelenecek.
+* Maile tıklanınca, mailin içeriğini açacak bir okuma ekranı olsun.  Mail Aksiyonları
+* Maile tıklanınca, mailin içeriğini açacak bir okuma ekranı olsun.
+* Mail geldiğinde bildirim sesi çalsın
+*  Label yanındaki + butonuyla yeni bir label eklenmeli

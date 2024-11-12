@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/gmail/page/common/index.css" />
+  </head>
+
+  <body>
+    <div class="gmail-project__nav">
+      <div class="gmail-project__nav-catagory">
+        <div class="gmail-project__nav-catagory-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <div class="gmail-project__nav-catagory-icon">
+          <img src="/gmail/images/gmail-icon.png" alt="gmail-icon">
+        </div>
+  
+        <div class="gmail-project__nav-catagory-text">
+          <p class="gmail-project__nav-catagory-text-mail">Gmail</p>
+        </div>
+      </div>
+
+      <div class="gmail-project__nav-search">
+        <div class="gmail-project__nav-search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="gmail-project__nav-search-input">
+          <input class="gmail-project__nav-search-input-form" type="email" placeholder="Search Mail"/>
+        </div>
+
+        <div class="gmail-project__nav-search-settings">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+      </div>
+
+      <div class="gmail-project__nav-select">
+        <div class="gmail-project__nav-select-question">
+          <i class="fa-regular fa-circle-question"></i>
+        </div>
+
+        <div class="gmail-project__nav-select-gear">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div class="gmail-project__nav-select-users">
+          <i class="fa-solid fa-table-cells"></i>
+        </div>
+
+        <div class="gmail-project__nav-select-user">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="gmail-project__coverage">
+      <div class="gmail-project__coverage-selection">
+        <!-- <div class="gmail-project__coverage-selection-create">
+          <div class="gmail-project__coverage-selection-create-compose">
+            <i class="gmail-project__coverage-selection-create-compose-pen fa-solid fa-pen"></i>
+            <p class="gmail-project__coverage-selection-create-compose-text">Compose</p>
+          </div>
+        </div> -->
+  
+        <div class="gmail-project__coverage-selection-boxs">
+          <div class="gmail-project__coverage-selection-boxs-create">
+            <div class="gmail-project__coverage-selection-boxs-create-compose">
+              <i class="gmail-project__coverage-selection-boxs-create-compose-pen fa-solid fa-pen"></i>
+              <p class="gmail-project__coverage-selection-boxs-create-compose-text">Compose</p>
+            </div>
+          </div>
+
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-inbox">
+                <i class="gmail-project__coverage-selection-boxs-headline-inbox-icon fa-solid fa-inbox"></i>
+
+                <p class="gmail-project__coverage-selection-boxs-headline-inbox-text">Inbox</p>
+            </div>
+          </div>
+  
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-star">
+                <i class="gmail-project__coverage-selection-boxs-headline-star-icon fa-regular fa-star"></i>
+  
+                <p class="gmail-project__coverage-selection-boxs-headline-star-text">Starred</p>
+            </div>
+          </div>
+  
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-clock">
+                <i class="gmail-project__coverage-selection-boxs-headline-clock-icon fa-regular fa-clock"></i>
+    
+                <p class="gmail-project__coverage-selection-boxs-headline-clock-text">Snoozed</p>
+            </div>
+          </div>
+  
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-sent">
+                <i class="gmail-project__coverage-selection-boxs-headline-sent-icon fa-solid fa-caret-right"></i>
+    
+                <p class="gmail-project__coverage-selection-boxs-headline-sent-text">Sent</p>
+            </div>
+          </div>
+  
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-file">
+                <i class="gmail-project__coverage-selection-boxs-headline-file-icon fa-regular fa-file"></i>
+    
+                <p class="gmail-project__coverage-selection-boxs-headline-file-text">Drafts</p>
+            </div>
+          </div>
+  
+          <div class="gmail-project__coverage-selection-boxs-headline">
+            <div class="gmail-project__coverage-selection-boxs-headline-more" id="more-btn">
+              <i class="gmail-project__coverage-selection-boxs-headline-more-icon fa-solid fa-chevron-down"></i>
+              <p class="gmail-project__coverage-selection-boxs-headline-more-text">More</p>
+            </div>
+          </div>
+          
+          <div class="gmail-project__coverage-selection-boxs-menu" id="menu" style="display: none;">
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-solid fa-star"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">Important</p>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-regular fa-message"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">Chats</p>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-solid fa-clock"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">Timed</p>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">All Mails</p>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-solid fa-exclamation-circle"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">Spam</p>
+            </div>
+            
+            <div class="gmail-project__coverage-selection-boxs-menu-item">
+              <i class="fa-solid fa-trash"></i>
+              <p class="gmail-project__coverage-selection-boxs-menu-item-text">Bin</p>
+            </div>
+          </div>
+          
+
+          <div class="gmail-project__coverage-selection-boxs-labels">
+            <div class="gmail-project__coverage-selection-boxs-labels-add">
+              <p class="gmail-project__coverage-selection-boxs-labels-add-header">Labels</p>
+              <i class="gmail-project__coverage-selection-boxs-labels-add-icon fa-solid fa-plus" id="add-icon"></i>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-labels-overlay" id="modal-overlay"></div>
+
+            <div class="gmail-project__coverage-selection-boxs-labels-modal" id="modal">
+              <div class="gmail-project__coverage-selection-boxs-labels-modal-header">
+                <p>New Tag</p>
+              </div>
+
+              <div class="gmail-project__coverage-selection-boxs-labels-modal-content">
+                <label for="labelName">Please enter a new tag name:</label>
+                <input type="text" id="labelName" placeholder="Etiket adı">
+                <br>
+                 <div class="gmail-project__coverage-selection-boxs-labels-modal-content-check">
+                  <input type="checkbox" id="nestedLabel">
+                  <label for="nestedLabel">Edit label:</label>
+                 </div>
+                <select>
+                  <option value="">Select an option</option>
+                </select>
+                <br>
+                <label for="labelColor">Choose a color for the label:</label>
+                <input type="color" id="labelColor" value="#333333">
+              </div>
+              <div class="gmail-project__coverage-selection-boxs-labels-modal-footer">
+                <button class="gmail-project__coverage-selection-boxs-labels-modal-footer-close" id="cancel-btn">İptal Et</button>
+                <button class="gmail-project__coverage-selection-boxs-labels-modal-footer-create" id="create-btn" disabled>Oluştur</button>
+              </div>
+            </div>
+
+            <div class="gmail-project__coverage-selection-boxs-labels-categories">
+              <div class="gmail-project__coverage-selection-boxs-labels-categories-article"></div>
+              <p class="gmail-project__coverage-selection-boxs-labels-categories-text">Categories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="gmail-project__coverage-main">
+        <div class="gmail-project__coverage-main-controller">
+          <input type="checkbox" id="horns" name="horns" />
+          <i class="gmail-project__coverage-main-controller-down fa-solid fa-caret-down"></i>
+          <i class="gmail-project__coverage-main-controller-refresh fa-solid fa-rotate-right"></i>
+          <i class="gmail-project__coverage-main-controller-other fa-solid fa-ellipsis-vertical"></i>
+
+          <div class="gmail-project__coverage-main-controller-interval">
+            <p class="gmail-project__coverage-main-controller-interval-text">1-16 of 16</p>
+            <i class="gmail-project__coverage-main-controller-interval-left fa-solid fa-chevron-left"></i>
+            <i class="gmail-project__coverage-main-controller-interval-right fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+        <div class="gmail-project__coverage-main-selection">
+          <div class="gmail-project__coverage-main-selection-primary">
+            <i class="fa-solid fa-inbox"></i>
+            <p class="gmail-project__coverage-main-selection-primary-text">Primary</p>
+          </div>
+          <div class="gmail-project__coverage-main-selection-promotions">
+            <i class="fa-solid fa-tag"></i>
+            <p class="gmail-project__coverage-main-selection-promotions-text">Promotions</p>
+          </div>
+          <div class="gmail-project__coverage-main-selection-social">
+            <i class="fa-solid fa-user-group"></i>
+            <p class="gmail-project__coverage-main-selection-social-text">Social</p>
+          </div>
+        </div>
+        <div class="gmail-project__coverage-main-mail" draggable="true">
+          <i class="gmail-project__coverage-main-mail-vertical fa-solid fa-grip-vertical"></i>
+          <input class="gmail-project__coverage-main-mail-check" type="checkbox" />
+          <i class="gmail-project__coverage-main-mail-star fa-regular fa-star fa-sm"></i>
+          <p class="gmail-project__coverage-main-mail-sender">Acme Inc.</p>
+          <p class="gmail-project__coverage-main-mail-detail">
+            Insights: The latest in industrial equipment and tools
+          </p>
+          <p class="gmail-project__coverage-main-mail-date">Feb, 26</p>
+        
+          <div class="gmail-project__coverage-main-mail-icons">
+            <i class="fa-solid fa-archive"></i>
+            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-envelope-open"></i>
+            <i class="fa-solid fa-clock"></i>
+          </div>
+        </div>
+
+        <div class="gmail-project__coverage-main-mail" draggable="true">
+          <i class="gmail-project__coverage-main-mail-vertical fa-solid fa-grip-vertical"></i>
+          <input class="gmail-project__coverage-main-mail-check" type="checkbox" />
+          <i class="gmail-project__coverage-main-mail-star fa-regular fa-star fa-sm"></i>
+          <p class="gmail-project__coverage-main-mail-sender">Travel Tales</p>
+          <p class="gmail-project__coverage-main-mail-detail">
+            Our latest Adventures and Destinations
+          </p>
+          <p class="gmail-project__coverage-main-mail-date">March, 26</p>
+        
+          <div class="gmail-project__coverage-main-mail-icons">
+            <i class="fa-solid fa-archive"></i>
+            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-envelope-open"></i>
+            <i class="fa-solid fa-clock"></i>
+          </div>
+        </div>
+
+        <div class="gmail-project__coverage-main-mail" draggable="true">
+          <i class="gmail-project__coverage-main-mail-vertical fa-solid fa-grip-vertical"></i>
+          <input class="gmail-project__coverage-main-mail-check" type="checkbox" />
+          <i class="gmail-project__coverage-main-mail-star fa-regular fa-star fa-sm"></i>
+          <p class="gmail-project__coverage-main-mail-sender">Delta Enterprises.</p>
+          <p class="gmail-project__coverage-main-mail-detail">
+            Delta Weekly News: Learn about important safety tips before you fly!
+          </p>
+          <p class="gmail-project__coverage-main-mail-date">Jan, 26</p>
+        
+          <div class="gmail-project__coverage-main-mail-icons">
+            <i class="fa-solid fa-archive"></i>
+            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-envelope-open"></i>
+            <i class="fa-solid fa-clock"></i>
+          </div>
+        </div>
+
+        <div class="gmail-project__coverage-main-box" id="compose-box">
+          <div class="gmail-project__coverage-main-box-header">
+            <p class="gmail-project__coverage-main-box-header-text">New Message</p>
+
+            <div class="gmail-project__coverage-main-box-header-icons">
+              <i class="gmail-project__coverage-main-box-header-icons-minimize fa-solid fa-window-minimize"></i>
+              <i class="gmail-project__coverage-main-box-header-icons-xmark fa-solid fa-xmark"></i>
+            </div>
+          </div>
+
+          <div class="gmail-project__coverage-main-box-content">
+            <div class="gmail-project__coverage-main-box-content-to">
+              <label class="gmail-project__coverage-main-box-content-to-text" for="to">To</label>
+              <input class="gmail-project__coverage-main-box-content-to-input" type="text" id="to">
+              <hr>
+            </div>
+
+            <div class="gmail-project__coverage-main-box-content-subject">
+              <input class="gmail-project__coverage-main-box-content-subject-input" type="text" id="subject" placeholder="Subject">
+              <hr>
+            </div>
+
+            <textarea class="gmail-project__coverage-main-box-content-body"></textarea>
+          </div>
+
+          <div class="gmail-project__coverage-main-box-content-footer">
+            <button class="gmail-project__coverage-main-box-content-footer-send" id="send-btn">Send</button>
+            <div class="gmail-project__coverage-main-box-content-footer-icon">
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-link"></i>
+              <i class="fa-regular fa-face-smile"></i>
+              <i class="fa-brands fa-google-drive"></i>
+              <i class="fa-solid fa-image"></i>
+              <i class="fa-solid fa-lock"></i>
+              <i class="fa-solid fa-pencil"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="gmail-project__coverage-main-box-content-footer-trash">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="gmail-project__coverage-icons">
+        <div class="gmail-project__coverage-icons-calendar">
+          <img src="/gmail/images/calendar-icon.png" alt="calendar">
+        </div>
+
+        <div class="gmail-project__coverage-icons-light">
+          <i class="fa-regular fa-lightbulb"></i>
+        </div>
+
+        <div class="gmail-project__coverage-icons-user">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="gmail-project__coverage-icons-minus">
+          <i class="fa-solid fa-minus"></i>
+        </div>
+
+        <div class="gmail-project__coverage-icons-plus">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="/gmail/page/common/common.js" defer></script>
+  </body>
+</html>
