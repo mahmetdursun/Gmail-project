@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+//https://docs.fontawesome.com/web/style/fixed-width boyutlandırma
+// - https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements
+// - https://chettriyuvraj.hashnode.dev/how-to-structure-your-sass-code (dosya parçalamak)
 
+//style.scss
 // Değişkenler
 $ghost-white: #f7f8fc;
 $equinox: #64686c;
@@ -9,6 +13,7 @@ $moon-white: #eaf1fb;
 $sonic-silver: #757575ff;
 $bleu-de-france: #2f80ed;
 $icy-landscape: #c3e7ff;
+$black-silver: #0000004d;
 $black-oak: #4f4f4f;
 $black-panther: #414244;
 $veiling-waterfalls: #d3e3fd;
@@ -22,6 +27,7 @@ $cotton-ball: #f2f6fc;
 $shadowed-steel: #4a4a4aff;
 $dead-blue-eyes: #0e57cbff;
 $mission-control: #818488ff;
+$black-dark: #00000099;
 $noghrei-silver: #bdbdbdff;
 $placebo-blue: #ecf2fcff;
 $covered-in-platinum: #b8b9baff;
@@ -33,18 +39,29 @@ $mission-control: #818488;
 $brilliant-liquorice: #535456ff;
 $bái-sè-white: #eceff1ff;
 $lighthouse: #f4f4f4ff;
+$fantasia: #747789ff;
+$cerebral-grey: #ccccccff;
+$snowflake: #f0f0f0ff;
+$bisque: #ffe4c4ff;
+$back-black: #0000001a;
 
 $ff-sans: "Open Sans", sans-serif;
 $ff-roboto: "Roboto", sans-serif;
 
+$fs-5:  0.313rem;
+$fs-9:  0.563rem;
 $fs-10: 0.625rem;
 $fs-11: 0.688rem;
 $fs-12: 0.75rem;
 $fs-13: 0.813rem;
 $fs-14: 0.875rem;
 $fs-15: 0.938rem;
+$fs-16: 1.0rem;
+$fs-17: 1.063rem;
 $fs-18: 1.125rem; 
 $fs-19: 1.188rem; 
+$fs-27: 1.688rem;
+$fs-41: 2.563rem;
 
 $lh-11: 0.688rem;
 $lh-12: 0.75rem;
@@ -61,10 +78,9 @@ body{
 }
 
 .gmail-project{
-
   &__nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;            
     width: 100%;
     padding: 0;                     
@@ -74,9 +90,25 @@ body{
     &-catagory{
       display: flex;
       padding-top: 9px;
-      padding-left: 11px;
+      padding-left: 21px;
+
+      &-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
+
+        &-icon{
+          font-size: $fs-16;
+        }
+      }
 
       &-icon{
+        padding-top: 5px;
         padding-left: 18px;
       }
       
@@ -87,7 +119,7 @@ body{
           line-height: $lh-25;
           font-weight: 600;
           color: $equinox;
-          padding-block: 3.03px;
+          padding-block: 3px;
           padding-left: 9px;
           margin: 0;
         }
@@ -96,26 +128,40 @@ body{
 
     &-search{
       display: flex;
-     
+      width: 68%;
       background-color: $moon-white;
       border-radius: 100px;
-      margin: 0 0 0 86.5px;
+      padding-left: 20px;
+      padding-right: 12px;
 
       &-icon{
-        padding-left: 20px;
-        padding-block: 14.21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-block: 11px;
         color: $thames-dusk;
+
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
       }
 
       &-input{
-        width: 961px;
+        display: block; 
+        width: 100%; 
+
         &-form{
+          display: block;
+          width: 100%;
+          flex-grow: 1;
           border-radius: 0;
           background-color: transparent;
           border: 1px solid $moon-white;
-          padding-block: 12.5px;
-          padding-left: 18.41px;
-          width: 960px;
+          padding-block: 17px;
+          padding-left: 10px;
           
           &::placeholder {
           color: $sonic-silver;  
@@ -128,63 +174,97 @@ body{
       }
 
       &-settings{
-        padding-block: 14px;
-        padding-right: 15px;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-block: 11px;
+
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
       }
     }
 
     &-select{
       display: flex;
-      padding-top: 8.5px;
-      margin-left: 26px;
-      font-size: 16.83px;
-
+      font-size: $fs-16;
 
       &-question{
-        padding-top: 5.09px;
-        font-size: 16.83px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $fs-16;
+        width: 32px;
+        height: 32px;
+
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
       }
 
       &-gear{
-        padding-left: 22.6px;
-        font-size: 16.25px;
-        padding-top: 5.37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 6px;
+        font-size: $fs-16;
+        width: 32px;
+        height: 32px;
+      
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
       }
 
       &-users{
-        padding-left: 22.6px;
-        padding-top: 6.11px;
-        font-size: 14.78px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 6px;
+        font-size: $fs-15;
+        width: 32px;
+        height: 32px;
+
+        &:hover{
+          background-color: $lavendar-wisp;
+          border-radius: 100%;
+        }
       }
 
       &-user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: $bleu-de-france;
-        padding-left: 22.6px;
-        font-size: 27px;
+        margin-left: 14px;
+        font-size: $fs-27;
       }
     }
   }
 
   &__coverage{
     display: flex;
-    
     width: 100%;
 
     &-selection{
       display: flex;
       justify-content: start;
+      flex-grow: 1;
 
       &-boxs{
         padding-top: 14px;
-        width: 213px;
-        height: 28px;
 
         &-create{
           display: flex;
           background-color: $icy-landscape;
           max-width: 124px;
-          height: 50px;
-          margin-left: 7.5px;
+          margin-left: 7px;
           border-radius: 10px;
           gap: 15px;
   
@@ -192,10 +272,10 @@ body{
             display: flex;
 
             &-pen{
-              padding-left: 16.5px;
+              padding-left: 16px;
               padding-top: 17px;
               padding-bottom: 17px;
-              font-size: 16px;
+              font-size: $fs-16;
             }
       
             &-text{
@@ -206,13 +286,14 @@ body{
               color: $black-oak;
               padding-block: 16px;
               padding-left: 15px;
-              padding-right: 16.5px;
+              padding-right: 16px;
+              margin: 0;
             } 
           }
         }
 
         &.collapsed {
-          width: 50px; 
+          width: 50px; //soldaki ikonlar küçülünce çalışıyor 
         }
   
         &-headline{
@@ -224,7 +305,7 @@ body{
             border-bottom-right-radius: 17px;
           }
 
-          &.active {
+          &.active { // sol kısmın üstüne basınca açılan mavilik
             background-color: $veiling-waterfalls; 
             border-top-right-radius: 17px;
             border-bottom-right-radius: 17px;
@@ -235,11 +316,10 @@ body{
           }
   
           &-inbox{
-            display: flex;
+            margin-top: 14px;
   
             &-icon{
-              font-size: 13px;
-              padding: 8px 0 0 0;
+              font-size: $fs-13;
             }
   
             &-text{
@@ -248,8 +328,8 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
+              padding-top: 6px;
+              padding-bottom: 7px;
               padding-left: 20px;
               margin: 0;
             }
@@ -259,8 +339,6 @@ body{
             display: flex;
   
             &-icon{
-              font-size: 13px;
-              padding: 8px 0 0 0;
               color: $black-oak;
             }
   
@@ -270,19 +348,15 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
+              padding-top: 6px;
+              padding-bottom: 7px;
               padding-left: 18px;
               margin: 0;
             }
           }
   
           &-clock{
-            display: flex;
-  
             &-icon{
-              font-size: 14px;
-              padding: 8px 0 0 0;
               color: $black-oak;
             }
   
@@ -292,19 +366,15 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
+              padding-top: 6px;
+              padding-bottom: 7px;
               padding-left: 19px;
               margin: 0;
             }
           }
   
           &-sent{
-            display: flex;
-  
             &-icon{
-              font-size: 13px;
-              padding: 8px 0 0 0;
               color: $black-oak;
             }
             
@@ -314,19 +384,15 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
-              padding-left: 25px;
+              padding-top: 6px;
+              padding-bottom: 7px;
+              padding-left: 20px;
               margin: 0;
             }
           }
   
           &-file{
-            display: flex;
-  
             &-icon{
-              font-size: 13px;
-              padding: 8px 0 0 0;
               color: $black-oak;
             }
   
@@ -336,19 +402,34 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
-              padding-left: 22px;
+              padding-top: 6px;
+              padding-bottom: 7px;
+              padding-left: 20px;
               margin: 0;
+            }
+          }
+
+          &-inbox,
+          &-star,
+          &-clock,
+          &-sent,
+          &-file {
+            display: flex;
+            align-items: center;
+            padding-top: 8px;
+            padding-right: 10px;
+
+            &-icon {
+              font-size: $fs-14; 
             }
           }
   
           &-more {
             display: flex;
-            cursor: pointer;
+            cursor: pointer; // mouse imleci değişir
           
             &-icon {
-              font-size: 13px;
+              font-size: $fs-13;
               padding: 8px 0 0 0;
               color: $black-oak;
             }
@@ -359,8 +440,8 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
+              padding-top: 6px;
+              padding-bottom: 7px;
               padding-left: 21px;
               margin: 0;
             }
@@ -379,13 +460,17 @@ body{
             color: $black-oak;
           
             &:hover {
+              width: 100%;
               background-color: $lavendar-wisp;
               border-top-right-radius: 17px;
               border-bottom-right-radius: 17px;
             }
           
-            &.active {
+            &.active { //sol more kısımdaki ikonlar tıklanınca mavi  
+              width: 100%;
               background-color: $veiling-waterfalls; 
+              border-top-right-radius: 17px;
+              border-bottom-right-radius: 17px;
               
               p, i {
                 color: $black; 
@@ -393,7 +478,7 @@ body{
             }
           
             i {
-              font-size: 13px;
+              font-size: $fs-13;
               padding: 8px 0 0 0;
             }
           
@@ -403,8 +488,8 @@ body{
               line-height: $lh-15;
               font-weight: 400;
               color: $black-panther;
-              padding-top: 6.12px;
-              padding-bottom: 6.88px;
+              padding-top: 6px;
+              padding-bottom: 7px;
               padding-left: 21px;
               margin: 0;
             }
@@ -423,10 +508,15 @@ body{
             font-weight: 600;
             color: $stiletto;
 
+            &-header{
+              margin: 0;
+              padding-bottom: 10px;
+            }
+
             &-icon{
               padding-left: 119px;
-              padding-block: 4px;
-              font-size: 12px;
+              padding-top: 4px;
+              font-size: $fs-12;
               color: $black;
               z-index: 10; 
 
@@ -442,7 +532,7 @@ body{
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); 
+            background-color: $black-dark; 
             display: none; 
             z-index: 99;
           }
@@ -452,45 +542,42 @@ body{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
+            width: 32%;
             background-color: $white;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px $black-silver;
             display: none; 
             z-index: 100;
           
             &-header {
-              p {
-                font-size: 18px;
-                font-weight: bold;
-                margin: 0;
-                padding: 24px 24px 16px 24px;
-              }
+              font-size: $fs-18;
+              font-weight: bold;
+              margin: 0;
+              padding: 24px 24px 16px 24px;
             }
           
             &-content {
               padding: 0 24px 20px;
           
-              label {
+              &-label {
                 display: block;
                 margin-bottom: 8px;
               }
           
-              input[type="text"],
-              select {
+              &-select,&-text {
                 width: 100%;
                 padding: 10px;
                 border: 1px solid $ghost-white;
                 border-radius: 4px;
                 margin-bottom: 15px;
               }
-          
-              input[type="checkbox"] {
-                margin-right: 8px;
-              }
-
+              
               &-check{
                 display: flex;
+
+                &-input{
+                  margin-right: 8px;
+                }
               }
             }
           
@@ -498,6 +585,7 @@ body{
               display: flex;
               justify-content: flex-end;
               padding: 0 24px 20px;
+              gap: 8px;
 
               &-close{
                 padding: 10px 20px;
@@ -518,15 +606,17 @@ body{
                 border-radius: 40px;
                 cursor: pointer;
                 color: $anti-flash-white;
-                background-color: $covered-in-platinum;
+                background-color: $bleu-de-france;
               }
             }
           }
 
           &-categories{
             display: flex;
-            padding-top: 3px;
+            align-items: center;
             padding-left: 23px;
+            padding-block: 9px;
+            position: relative;
 
             &:hover{
               background-color: $lavendar-wisp;
@@ -538,7 +628,7 @@ body{
               width: 14px;
               height: 11px;
               background-color: $thames-dusk;
-              clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+              clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%); //sol kısımda labelın altında değiştirilebilir renk kutusu
             }
 
             &-text{
@@ -550,6 +640,35 @@ body{
               padding-left: 16px;
               margin: 0;
             }
+
+            &-icon{
+              margin-left: auto;
+              cursor: pointer;
+              margin-right: 8px;
+              
+              &-menu {
+                position: absolute;
+                background-color: $white;
+                border: 1px solid $cerebral-grey;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px $back-black;
+                padding: 10px;
+                list-style: none;
+                z-index: 100;
+              
+                &-edit,&-delete {
+                  cursor: pointer;
+                  padding: 5px;
+                  font-size: $fs-14;
+                  color: $carbon;
+                  transition: background-color 0.3s;
+              
+                  &:hover {
+                    background-color: $snowflake;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -558,26 +677,47 @@ body{
     &-main{
       background-color: $white;
       border-radius: 15px;
-      width: 1190px;
-      height: 796px;
+      height: 175%;
       margin-top: 9px;
       transition: width 0.3s ease;
-      
-     &.expanded {
-       width: 1320px;
-       margin-left: 10px;
-       transition: margin-left 0.3s ease;
-      }
+      flex-grow: 1;
+      margin-left: 12px;
 
       &-controller{
         display: flex;
         align-items: center;
         margin-top: 16px;
         margin-left: 18px;
+        position: relative;
+
+        &-check{
+          width: 13px;
+          height: 13px;
+
+          &:hover{
+            background-color: $lavendar-wisp;
+            border-radius: 5%;
+          }
+        }
+
+        &-down{
+          padding-left: 7px;
+          font-size: $fs-12;
+        }
+
+        &-refresh, &-other{
+          padding-left: 27px;
+        }
+
+        &-trash, &-open{
+          padding-left: 27px;
+          display: none;
+        }
 
         &-interval{
           display: flex;
-          padding-left: 906px;
+          margin-left: auto;
+          padding-right: 35px;
 
           &-text{
             font-family: $ff-roboto;
@@ -586,41 +726,23 @@ body{
             font-weight: 500;
             color: $mission-control;
             padding-top: 2px;
+            margin: 0;
           }
 
-          &-left{
-            padding-left: 23.53px;
-            font-size: 10px;
-            color: $noghrei-silver;
-            padding-top: 2.65px;
-          }
-
+          &-left,
           &-right{
-            padding-left: 23.53px;
-            font-size: 10px;
+            padding-left: 23px;
+            font-size: $fs-10;
             color: $noghrei-silver;
-            padding-top: 2.65px;
+            padding-top: 3px;
           }
-        }
-
-        &-down{
-          padding-left: 2px;
-          font-size: 12px;
-        }
-
-        &-refresh{
-          padding-left: 27.5px;
-        }
-
-        &-other{
-          padding-left: 27.5px;
         }
       }
 
       &-selection{
         display: flex;
         flex-direction: row;
-        padding-top: 12.5px;
+        padding-top: 12px;
       
         &-primary{
           display: flex;
@@ -642,29 +764,9 @@ body{
           }
         }
 
-        &-promotions{
+        &-promotions, &-social{
           display: flex;
-          padding: 18px 127px 18px 21.5px;
-
-          &:hover{
-            background-color: $lighthouse;
-          }
-
-          &-text{
-            font-family: $ff-roboto;
-            font-size: $fs-13;
-            line-height: $lh-15;
-            font-weight: 600;
-            padding-left: 16px;
-            padding-bottom: 2px;
-            margin: 0;
-            color: $black-oak;
-          }
-        }
-
-        &-social{
-          display: flex;
-          padding: 18px 127px 18px 21.5px;
+          padding: 18px 127px 18px 21px;
 
           &:hover{
             background-color: $lighthouse;
@@ -685,17 +787,52 @@ body{
 
       &-mail{
         display: flex;
-        width: 1151px;
-        height: 35px;
-        padding-block: 10px;
+        margin-right: 17px;
         align-items: center;
         position: relative;
+        background-color: $bisque;
+
+        &.read {
+          .gmail-project__coverage-main-mail-sender,
+          .gmail-project__coverage-main-mail-detail {
+            color: $smoked-pearl;
+          }
+
+          .gmail-project__coverage-main-mail-star{
+            color: $smoked-pearl;
+
+            &.fa-solid {
+              color: $american-yellow; //siyah olmasın diye
+            }
+          }
+          
+        }
+      
+        &.unread {
+          .gmail-project__coverage-main-mail-sender,
+          .gmail-project__coverage-main-mail-detail {
+            color: $carbon;
+          }
+
+          .gmail-project__coverage-main-mail-star{
+            color: $carbon;
+            
+            &.fa-solid {
+              color: $american-yellow;
+            }
+          }
+        }
+
+        &-table{
+          width: 100%;
+        }
       
         &-vertical {
           position: absolute; 
           left: 0; 
-          opacity: 0; 
+          opacity: 0; //görünürlüğü değiştirdiğim kısım
           transition: opacity 0.3s ease;
+          display: none;
 
           &:hover{
             opacity: 1;
@@ -717,8 +854,10 @@ body{
             color: $american-yellow;
           }
         }
-      
+
+      &-user{
         &-sender {
+          width: 15%;
           font-family: $ff-roboto;
           font-size: $fs-13;
           line-height: $lh-15;
@@ -727,10 +866,11 @@ body{
           padding-left: 15px;
           padding-top: 10px;
           margin: 0 0 10px 0;
-          width: 145px;
+          white-space: nowrap; // Tek satırda tutar
         }
       
         &-detail {
+          width: 60%;
           font-family: $ff-roboto;
           font-size: $fs-13;
           line-height: $lh-15;
@@ -738,24 +878,26 @@ body{
           color: $smoked-pearl;
           padding-top: 10px;
           margin: 0 0 10px 0;
-          width: 826px;
+          white-space: nowrap; // Tek satırda tutar
         }
       
         &-date {
+          display: flex;
+          padding-right: 80px;
           font-family: $ff-roboto;
           font-size: $fs-10;
           line-height: $lh-11;
           font-weight: 400;
           color: $black-panther;
-          padding-top: 4px;
           margin: 0;
+          white-space: nowrap; // Tek satırda tutar
         }
+      }
       
         &-icons {
           position: absolute;
           right: 15px;
           display: none;
-          background-color: $white;
 
           &:hover {
             display: flex;
@@ -764,7 +906,7 @@ body{
           i {
             margin-left: 15px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: $fs-13;
             color: $black-panther;
           }
         }
@@ -773,10 +915,9 @@ body{
       &-box { 
         left: 948px;
         bottom: 13px;
-        width: 485px;
         background-color: $white;
         border-radius: 5px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px $back-black;
         display: none; 
         flex-direction: column;
         position: fixed;
@@ -802,71 +943,99 @@ body{
           &-icons {
             &-minimize {
               cursor: pointer;
-              padding: 5px 0 12px 0;
-              font-size: 12px;
+              padding: 0px 0 12px 0;
+              font-size: $fs-9;
               color: $shadowed-steel;
             }
 
-            &-xmark {
+            &-close {
               cursor: pointer;
-              padding: 5px 16px 12px 14.32px;
-              font-size: 12px;
+              padding: 12px 16px 11px 14px;
+              font-size: $fs-12;
               color: $shadowed-steel;
             }
           }
         }
 
         &-content {
-          font-size: 14px;
+          font-size: $fs-14;
           color: $black-oak;
       
           &-to{
+            padding-top: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+
             &-text{
               font-family: $ff-roboto;
               font-size: $fs-12;
               line-height: $lh-14;
               font-weight: 400;
-              padding-left: 16px;
+              padding-top: 33px;
+              padding-bottom: 10px;
             }
 
             &-input{
-                width: calc(98% - 50px);
-                padding: 1px;
-                border: none;
-                border-radius: 4px;
+              width: calc(98% - 50px);
+              padding: 1px;
+              border: none;
+              border-radius: 4px;
 
-                &:focus {
-                  outline: none;
-                }
+              &::placeholder {
+                font-family: $ff-roboto;
+                font-size: $fs-12;
+                line-height: $lh-14;
+                font-weight: 400;
+                color: $shadowed-steel;
+              }
+              
+              &:focus {
+                outline: none; //çevre çizgilerini kaldırdı
+              }
+            }
+
+            &-stick{
+              margin: 0;
             }
           }
 
           &-subject{
+            padding-top: 9px;
             padding-left: 16px;
-            &-input{
-                width: calc(105% - 50px);
-                padding: 1px;
-                border: none;
-                border-radius: 4px;
+            padding-right: 16px;
 
-                &:focus {
-                  outline: none;
-                }
+            &-input{
+              width: calc(105% - 50px);
+              border: none;
+              border-radius: 4px;
+              padding-bottom: 9px;
+
+              &::placeholder {
+                font-family: $ff-roboto;
+                font-size: $fs-12;
+                line-height: $lh-14;
+                font-weight: 400;
+                color: $fantasia;
+              }
+
+              &:focus {
+                outline: none;
+              }
             }
-            ::placeholder{
-              font-family: $ff-roboto;
-              font-size: $fs-12;
-              line-height: $lh-14;
-              font-weight: 400;
+
+            &-hr{
+              margin: 0;
             }
           }
       
           &-body {
+            padding: 0;
             width: 91%;
-            height: 322px;
+            min-height: 322px;
             border: none;
             border-radius: 4px;
             margin-left: 16px;
+            padding-top: 10px;
 
             &:focus {
               outline: none;
@@ -877,17 +1046,18 @@ body{
             display: flex;
             align-items: center;
             padding-left: 15px;
+            padding-right: 17px;
             padding-bottom: 12px;
         
             &-send {
-              font-size: $ff-roboto;
+              font-family: $ff-roboto;
               font-size: $fs-12;
               line-height: $lh-14;
               font-weight: 500;
               background-color: $dead-blue-eyes;
               color: $white;
               padding: 7px 41px 7px 15px;
-              margin-right: 3.83px;
+              margin-right: 4px;
               border: none;
               border-radius: 200px;
               cursor: pointer;
@@ -906,7 +1076,7 @@ body{
             }
 
             &-trash{
-              padding-left: 127.35px;
+              padding-left: 127px;
             }
           }
         }
@@ -920,49 +1090,26 @@ body{
           display: flex;
           align-items: center;
           color: $black-oak;
-          font-size: 14px;
+          font-size: $fs-14;
+
+          &-back{
+            cursor: pointer;
+          }
 
           &-archive{
-            padding-left: 47.91px;
+            padding-left: 48px;
+            padding-right: 23px;
           }
 
-          &-exclamation{
-            padding-left: 22.91px;
-            padding-right: 22.91px;
-          }
-
-          &-trash{
-            padding-right: 22.91px;
-          }
-
-          &-stick{
-            padding-right: 22.91px;
-          }
-
-          &-open{
-            padding-right: 22.91px;
-          }
-
-          &-clock{
-            padding-right: 22.91px;
-          }
-
-          &-check{
-            padding-right: 22.91px;
-          }
-
-          &-folder{
-            padding-right: 22.91px;
-          }
-
-          &-left{
-            padding-right: 22.91px;
+          &-exclamation,&-trash,&-stick,&-open,
+          &-clock,&-check,&-folder,&-left{
+            padding-right: 23px;
           }
 
           &-interval{
             display: flex;
-            padding-block: 5.65px;
-            padding-left: 593px;
+            margin-left: auto;
+            padding-right: 35px;
   
             &-text{
               font-family: $ff-roboto;
@@ -975,31 +1122,34 @@ body{
             }
   
             &-left{
-              padding-left: 23.53px;
-              font-size: 10px;
+              padding-left: 23px;
+              font-size: $fs-10;
               color: $noghrei-silver;
-              padding-top: 2.65px;
+              padding-top: 3px;
             }
   
             &-right{
-              padding-left: 28.53px;
-              font-size: 10px;
+              padding-left: 28px;
+              font-size: $fs-10;
               color: $noghrei-silver;
-              padding-top: 2.65px;
+              padding-top: 3px;
             }
           }
         }
 
         &-content{
           display: flex;
+          align-items: center;
+          padding: 41px 39px 23px 57px;     
+          width: 100%;
 
           &-text{
             font-family: $ff-sans;
             font-size: $fs-18;
             line-height: $lh-24;
             font-weight: 400;
-            padding: 41px 0 23px 57px;
             margin: 0;
+            padding-right: 10px;
           }
 
           &-inbox{
@@ -1008,8 +1158,6 @@ body{
             height: 18px;
             background-color: $christmas-silver;
             border-radius: 4px;
-            margin-top: 46px;
-            margin-left: 10px;
 
             &-text{
               font-family: $ff-roboto;
@@ -1022,33 +1170,34 @@ body{
             }
 
             &-cancel{
-              padding: 9.5px 5.17px 15.17px 5px;
-              font-size: 5px;
+              padding: 9px 5px 15px 5px;
+              font-size: $fs-5;
               color: $squant;
             }
+          }
+          &-icons{
+            display: flex;
+            margin-left: auto;
+            padding-right: 90px;
+            color: $thames-dusk;
+            
+            &-print{
+              font-size: $fs-13;
+            }
 
-            &-icons{
-              display: flex;
-              padding: 3px 39px 9.7px 523px;
-              color: $thames-dusk;
-              
-              &-print{
-                font-size: 13px;
-              }
-
-              &-share{
-                font-size: 12px;
-                padding-left: 19.59px;
-              }
+            &-share{
+              font-size: $fs-12;
+              padding-left: 19px;
             }
           }
         }
 
         &-sender{
           display: flex;
+          padding: 0 39px 20px 0;
 
           &-user{
-            font-size: 41px;
+            font-size: $fs-41;
             color: $bleu-de-france;
           }
 
@@ -1058,7 +1207,7 @@ body{
             font-size: $fs-15;
             line-height: $lh-17;
             font-weight: 700;
-            padding: 2px 0 20.5px 16px;
+            padding: 2px 0 0 16px;
 
             &-mail{
               font-family: $ff-roboto;
@@ -1071,7 +1220,7 @@ body{
 
           &-info{
             display: flex;
-            padding-left: 579px;
+            margin-left: auto;
 
             &-text{
               font-family: $ff-roboto;
@@ -1083,7 +1232,7 @@ body{
             }
 
             &-star{
-              font-size: 13px;
+              font-size: $fs-13;
               padding: 4px 0 0 20px;
               cursor: pointer;
               transition: color 0.3s ease;
@@ -1095,19 +1244,19 @@ body{
             }
 
             &-reply{
-              font-size: 14px;
+              font-size: $fs-14;
               padding: 0 0 0 20px;
             }
 
             &-stick{
-              font-size: 11px;
+              font-size: $fs-11;
               padding: 2px 0 0 20px;
             }
           }
         }
 
         &-explanation{
-          padding: 12px 95px 145px 57px;
+          padding: 12px 95px 0 57px;
 
           &-text{
             font-family: $ff-roboto;
@@ -1127,72 +1276,117 @@ body{
     }
 
     &-icons{
-      padding-top: 18.8px;
+      padding-top: 19px;
       margin-left: 12px;
       
       &-calendar{
-        font-size: 16px;
+        font-size: $fs-16;
         padding-bottom: 32px;
       }
 
       &-light{
-        font-size: 17px;
+        font-size: $fs-17;
         padding-bottom: 32px;
       }
 
       &-user{
-        font-size: 16px;
+        font-size: $fs-16;
         padding-bottom: 32px;
       }
 
       &-minus{
-        font-size: 17px;
+        font-size: $fs-17;
         padding-bottom: 32px;
       }
 
       &-plus{
-        font-size: 13.76px;
+        font-size: $fs-14;
         padding-bottom: 32px;
       }
     }
   }
 }
 
+//sol kısmın açılıp kapanması sonucu değişecek durumlar
 $is-collapsed-display: none;
 $is-expanded-display: block;
-$is-collapsed-padding: 0px;
-$is-expanded-padding: 119px;
 
 .gmail-project__coverage-selection-boxs {
-    &.collapsed {
-        p, .gmail-project__coverage-selection-boxs-labels-add-header,
-        .gmail-project__coverage-selection-boxs-labels-categories-text,
-        .gmail-project__coverage-selection-boxs-create-compose-text,
-        .gmail-project__coverage-selection-boxs-menu-item-text {
-            display: $is-collapsed-display;
-        }
+
+  &.collapsed {
+    p, .gmail-project__coverage-selection-boxs-labels-add-header,
+    .gmail-project__coverage-selection-boxs-labels-categories-text,
+    .gmail-project__coverage-selection-boxs-create-compose-text,
+    .gmail-project__coverage-selection-boxs-menu-item-text {
+      display: $is-collapsed-display;
+      }
         
-        .gmail-project__coverage-selection-boxs-labels-add-icon {
-            padding-left: $is-collapsed-padding;
-        } 
+      .gmail-project__coverage-selection-boxs-labels-add-icon {
+        padding-left: 0px;
+        padding-bottom: 10px;
+      } 
+      .gmail-project__coverage-selection-boxs-headline,
+      .gmail-project__coverage-selection-boxs-menu-item,
+      .gmail-project__coverage-selection-boxs-labels-categories{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        padding-left: 0px;
+        margin-left: 11px;
+        i{
+          padding-left: 9px;
+          padding-bottom: 10px;
+        }
+
+        .gmail-project__coverage-selection-boxs-labels-categories-article{
+          margin-left: 5px;
+          padding-left: 15px;
+        }
+
+        .gmail-project__coverage-selection-boxs-labels-categories-icon{
+          padding-top: 10px;
+          padding-left: 10px;
+          padding-bottom: 10px;
+        }
+      }
     }
 
-    &.expanded {
-        p, .gmail-project__coverage-selection-boxs-labels-add-header,
-        .gmail-project__coverage-selection-boxs-labels-categories-text,
-        .gmail-project__coverage-selection-boxs-create-compose-text,
-        .gmail-project__coverage-selection-boxs-menu-item-text {
-            display: $is-expanded-display;
-        }
+  &.expanded {
+    p, .gmail-project__coverage-selection-boxs-labels-add-header,
+      .gmail-project__coverage-selection-boxs-labels-categories-text,
+      .gmail-project__coverage-selection-boxs-create-compose-text,
+       .gmail-project__coverage-selection-boxs-menu-item-text {
+         display: $is-expanded-display;
+      }
 
-        .gmail-project__coverage-selection-boxs-labels-add-icon {
-            padding-left: $is-expanded-padding;
-        }
+      .gmail-project__coverage-selection-boxs-labels-add-icon {
+         padding-left: 119px;
+      }
     }
 }
 
+
+
+//primary kısımlarının mavilikleri
 .gmail-project__coverage-main-selection .active i,
 .gmail-project__coverage-main-selection .active p {
   color: $bleu-de-france;
 }
 
+//ortadaki hover durumları
+.gmail-project__coverage-main-mail {
+  .gmail-project__coverage-main-mail-icons,
+  .gmail-project__coverage-main-mail-vertical {
+    display: none;
+  }
+
+  // Hover durumunda ikonları görünür yap
+  &:hover {
+    .gmail-project__coverage-main-mail-icons {
+      display: flex;
+    }
+    .gmail-project__coverage-main-mail-vertical {
+      display: inline;
+    }
+  }
+}
